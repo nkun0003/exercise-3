@@ -1,26 +1,25 @@
-import 'dart:convert'; // Importing dart:convert to handle JSON conversion
+import 'dart:convert'; //this importing dart:convert to handle JSON conversion
 
-// Define the Students class
+//Here i am defining the Students class
 class Students {
-  // Member field that will store the list of people
-  List<Map<String, String>> people;
+  //Member field that will store the list of people
+  List<Map<String, String>> people; //a constructor will accept a List< Map<String, String> >
 
-  // Constructor to initialize the people list
-  Students(this.people);
+  Students(this.people); //constructor to initialize the people list
 
-  // Sort method to sort the list based on the passed field name
+  //sort method to sort the list based on the passed field name
   void sort(String field) {
     people.sort((a, b) => a[field]!.compareTo(b[field]!));
   }
 
-  // Output method to print each item in the list
+  //Output method to print each item in the list
   void output() {
     for (var person in people) {
       print(person);
     }
   }
 
-  // Plus method to add a new person (Map) to the list
+  //plus method to add a new person (Map) to the list
   void plus(Map<String, String> person) {
     people.add(person);
   }
@@ -32,13 +31,14 @@ class Students {
 }
 
 void main() {
-  // JSON string that will be converted to a list of maps
+  //JSON string that will be converted to a list of maps
   String json = '''
   [
     {"first":"Steve", "last":"Griffith", "email":"griffis@algonquincollege.com"},
     {"first":"Adesh", "last":"Shah", "email":"shaha@algonquincollege.com"},
     {"first":"Tony", "last":"Davidson", "email":"davidst@algonquincollege.com"},
     {"first":"Adam", "last":"Robillard", "email":"robilla@algonquincollege.com"}
+    {"first":"Rocien", "last":"Nkunga", "email":"nkun0003@algonquinlive.com}
   ]
   ''';
 
